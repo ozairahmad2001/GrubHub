@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "name": "grubhub",
+  "version": "1.0.0",
+  "description": "A food ordering web application.",
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozairahmad2001/GrubHub.git"
+  },
+  "author": "Ozair Ahmad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ozairahmad2001/GrubHub/issues"
+  },
+  "homepage": "https://github.com/ozairahmad2001/GrubHub#readme"
+}
