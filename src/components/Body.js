@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { restaurantList } from "../config";
 import RestaurantCard from "./RestaurantCard";
-
+import Shimmer from "./Shimmer";
+import { Link } from "react-router";
 function filterData(searchText, allRestaurants) {
   const filteredData = allRestaurants.filter((restaurant) =>
     restaurant?.info?.name?.toLowerCase()?.includes(searchText.toLowerCase())
@@ -29,11 +30,13 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
-if(!allRestaurants) return null;
-if(filteredRestaurants?.length === 0) {
-    return <h1>No results found.</h1>
-}
-  return (
+  if (!allRestaurants) return null;
+  // if(filteredRestaurants?.length === 0) {
+  //     return <h1>No results found.</h1>
+  // }
+  return allRestaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <>
       <div className="search-container">
         <input
@@ -55,7 +58,11 @@ if(filteredRestaurants?.length === 0) {
       <div className="restaurant-list">
         {filteredRestaurants.map((restaurant) => {
           return (
-            <RestaurantCard {...restaurant.info} key={restaurant.info.id} />
+            <Link
+              key={restaurant.info.id}
+              to={"/restaurant/" + restaurant.info.id}>
+              <RestaurantCard {...restaurant.info} />
+            </Link>
           );
         })}
       </div>

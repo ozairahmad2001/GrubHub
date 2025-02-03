@@ -6,7 +6,7 @@
    - Installed Parcel
    - Created a header section with logo and nav items
    - Created body
-   - Created restaurant cards within body
+   - Created restaurant cards within body 
    - Populated the restaurant cards with static data copied and pasted into code from swiggy api response
    - Put map on the api data array and populated the cards with static data
    - Added the search bar functionality and made it work, using state variables and filter functions.
