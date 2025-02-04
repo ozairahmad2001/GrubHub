@@ -15,3 +15,10 @@
    - Made the search results work on the live data.
    - Planned to create a shimmer ui, when data is not available.
    - Made login/logout toggle button.
+   - Added restaurant menu component.
+   - Called live menu api, destructured the data and then populated the menu card.
+   - Added routing, using react-router
+   -Optimised the app using lazy loading, code splitting etc.
+   - Added CSS to our web app using tailwind css, it still looks ugly though, will keep working on it to make it look beautiful.
+   - Explored context and saw how it works.
+   - Added redux store and made the cart functionality work, adding, removing items and clearing the cart.
